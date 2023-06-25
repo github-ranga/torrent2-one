@@ -1,12 +1,12 @@
 import os
 
 os.system('curl -OJ "https://codeload.github.com/novnc/noVNC/zip/refs/tags/v1.4.0"')
-os.system('unzip "./noVNC-1.4.0.zip"')
-
+os.system('unzip "./noVNC-1.4.0.zip" > /dev/null')
+os.wait()
 os.system('echo $PATH')
 os.system('echo $PWD')
 
-os.system('echo -e "\n123456\n123456\nn\n" | vncpasswd')
+os.system('echo -e "\n\n123456\n\n123456\n\nn\n\n" | vncpasswd')
 os.system('echo -e "#!/bin/sh\nxfce4-terminal" > ~/.vnc/xstartup')
 
 os.system('vncserver -depth 32 -geometry 1200x900 &')
