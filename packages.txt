@@ -1,6 +1,0 @@
-curl
-unzip
-tigervnc-standalone-server 
-tigervnc-server 
-xfce4-terminal
-xfce4
