@@ -5,7 +5,15 @@ import os
 
 os.system('echo $PATH')
 os.system('echo $PWD')
-os.system('apt install curl')
+os.system('dpkg')
+import os
+import platform
+
+print("Name of the operating system:", os.name)
+print("Name of the OS system:", platform.system())
+print("Version of the operating system:", platform.release())
+
+
 os.system('echo -e "123456\n123456\nn\n" | vncpasswd')
 os.system('echo -e "#!/bin/sh\nxfce4-terminal" > ~/.vnc/xstartup')
 
