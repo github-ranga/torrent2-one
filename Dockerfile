@@ -4,6 +4,8 @@ WORKDIR /code
 
 COPY ./requirements.txt /code/requirements.txt
 
+RUN apt update
+
 RUN useradd -m -u 1000 user
 
 USER user
