@@ -7,8 +7,8 @@ os.system('echo $PWD')
 
 os.system('echo -e "123456" > vncpass')
 os.system('vncpasswd -f vncpass')
-os.system('mkdir "~/.vnc"')
-os.system('echo -e "#!/bin/sh\nxfce4-terminal" > ~/.vnc/xstartup')
+os.system('mkdir "/home/user/.vnc"')
+os.system('echo -e "#!/bin/sh\nxfce4-terminal" > /home/user/.vnc/xstartup')
 
 os.system('vncserver -depth 32 -geometry 1200x900 &')
 os.system('./noVNC-1.4.0/utils/novnc_proxy --vnc localhost:5901 --listen localhost:7860 &>/dev/null &')
