@@ -17,7 +17,7 @@ os.system('chmod +x ./xstartup')
 #os.system('./noVNC-1.4.0/utils/novnc_proxy --vnc localhost:5901 --listen localhost:7860 &')
 
 os.system('echo "------websockify------"')
-os.system('./noVNC-1.4.0/utils/websockify/run 7860 localhost:5901 --web ./ -D')
+os.system('./noVNC-1.4.0/utils/websockify/run localhost:7860 localhost:5901 --web ./ -D')
 
 os.system('echo "------vncserver------"')
 os.system('vncserver -passwd ./vncpass -xstartup ./xstartup -depth 32 -geometry 1200x900 ')
