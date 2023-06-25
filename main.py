@@ -5,7 +5,7 @@ import os
 
 os.system('echo $PATH')
 os.system('echo $PWD')
-os.system('apt install -y curl')
+os.system('sudo apt install -y curl')
 import os
 import platform
 
