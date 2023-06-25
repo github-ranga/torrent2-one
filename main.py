@@ -19,7 +19,7 @@ os.system('chmod +x ./xstartup')
 
 os.system('echo "------websockify------"')
 #os.system('echo -e "8080:localhost:8080" > tok')
-os.system('./noVNC-1.4.0/utils/websockify/run --token-plugin=TokenFile --token-source=tok 0.0.0.0:7860 localhost:5901 --web /home/user/app -D')
+os.system('./noVNC-1.4.0/utils/websockify/run --token-plugin=TokenFile --token-source=tok 0.0.0.0:7860 --web /home/user/app -D')
 
 
 os.system('echo "------vncserver------"')
