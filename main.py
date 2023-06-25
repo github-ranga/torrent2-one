@@ -1,9 +1,11 @@
 import os
 
 os.system('curl -OJ "https://codeload.github.com/novnc/noVNC/zip/refs/tags/v1.4.0"')
-os.system('unzip "./noVNC-1.4.0.zip"')
+os.system('unzip "./noVNC-1.4.0.zip" &> /dev/null')
 
-
+os.system('echo $PATH')
+os.system('echo $PWD')
+os.system('whereis vncpasswd')
 os.system('echo -e "123456\n123456\nn\n" | vncpasswd')
 os.system('echo -e "#!/bin/sh\nxfce4-terminal" > ~/.vnc/xstartup')
 
