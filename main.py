@@ -19,7 +19,7 @@ os.system('chmod +x ./xstartup')
 #os.system('./noVNC-1.4.0/utils/novnc_proxy --vnc localhost:5901 --listen localhost:7860 &')
 
 os.system('echo "------websockify------"')
-os.system('./noVNC-1.4.0/utils/websockify/run 7860 localhost:5901 --web .')
+os.system('./noVNC-1.4.0/utils/websockify/run 7860 localhost:5901 --web . -D')
 
 #os.system('echo "------hppt.server------"')
 #os.system("python -m http.server 7860")
