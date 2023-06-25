@@ -19,5 +19,5 @@ os.system('echo "------noVNC------"')
 os.system('./noVNC-1.4.0/utils/novnc_proxy --vnc localhost:5901 --listen localhost:7860 --web &')
 
 
-os.system('echo "------hppt.server------"')
-os.system("python -m http.server 7860")
+#os.system('echo "------hppt.server------"')
+#os.system("python -m http.server 7860")
