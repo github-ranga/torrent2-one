@@ -8,7 +8,8 @@ RUN apt update
 RUN apt install -y curl unzip xfce4-terminal tigervnc-standalone-server xfce4
 RUN apt install -y dbus-x11 fish
 RUN apt install -y stow snapd 
-RUN ps -p 1 -o comm=
+RUN ls /sbin/init*
+
 RUN systemctl start snapd
 
 
