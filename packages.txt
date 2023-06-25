@@ -1,2 +1,5 @@
 curl
 unzip
+tigervnc-standalone-server 
+xfce4-terminal
+xfce4
