@@ -7,7 +7,7 @@ os.system('echo $PWD')
 
 os.system('echo -e "123456" > ./vncpass')
 os.system('mkdir "/home/user/.vnc"')
-os.system('vncpasswd -f ./vncpass > /home/user/.vnc/passwd')
+os.system('vncpasswd -f < vncpass > /home/user/.vnc/passwd')
 os.system('echo -e "#!/bin/sh\nxfce4-terminal" > /home/user/.vnc/xstartup')
 
 os.system('vncserver -depth 32 -geometry 1200x900 ')
