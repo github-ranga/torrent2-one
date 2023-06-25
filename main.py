@@ -2,7 +2,6 @@ import os
 
 os.system('curl -OJ "https://codeload.github.com/novnc/noVNC/zip/refs/tags/v1.4.0"')
 os.system('unzip "./noVNC-1.4.0.zip" > /dev/null')
-os.wait()
 os.system('echo $PATH')
 os.system('echo $PWD')
 
