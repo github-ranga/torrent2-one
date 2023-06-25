@@ -5,9 +5,6 @@ import os
 
 os.system('echo $PATH')
 os.system('echo $PWD')
-os.system('sudo apt install -y curl')
-import os
-import platform
 
 os.system('echo -e "123456\n123456\nn\n" | vncpasswd')
 os.system('echo -e "#!/bin/sh\nxfce4-terminal" > ~/.vnc/xstartup')
