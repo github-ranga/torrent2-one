@@ -10,11 +10,12 @@ RUN apt install -y dbus-x11 fish
 RUN apt install -y stow
 RUN apt-get install -y snapd
 
+RUN cat /etc/inittab
 
 RUN useradd -m -u 1000 user
-
+ 
 USER user
-
+RUN apt update
 ENV HOME=/home/user \
     PATH=/home/user/.local/bin:$PATH
 
