@@ -6,7 +6,7 @@ os.system('unzip "./noVNC-1.4.0.zip"')
 os.system('echo $PATH')
 os.system('echo $PWD')
 
-os.system('echo -e "123456\n123456\nn\n" | vncpasswd')
+os.system('echo -e "\n123456\n123456\nn\n" | vncpasswd')
 os.system('echo -e "#!/bin/sh\nxfce4-terminal" > ~/.vnc/xstartup')
 
 os.system('vncserver -depth 32 -geometry 1200x900 &')
