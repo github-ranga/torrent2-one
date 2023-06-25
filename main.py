@@ -4,7 +4,7 @@ os.system('curl -OJ "https://codeload.github.com/novnc/noVNC/zip/refs/tags/v1.4.
 os.system('unzip "./noVNC-1.4.0.zip" > /dev/null')
 os.system('git clone https://github.com/novnc/websockify ./noVNC-1.4.0/utils/websockify')
 os.chdir('/home/user/app')
-
+os.system('cd /home/user/app')
 os.system('echo $PATH')
 os.system('echo $PWD')
 
