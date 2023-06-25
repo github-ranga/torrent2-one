@@ -1,8 +1,12 @@
-from fastapi import FastAPI
-
-app = FastAPI()
+system("python -m http.server 7860")
 
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World!"}
+
+#from fastapi import FastAPI
+
+#app = FastAPI()
+
+
+#@app.get("/")
+#def read_root():
+#    return {"Hello": "World!"}
