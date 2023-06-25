@@ -8,8 +8,9 @@ os.system('chmod +x /home/user/app/xstartup')
 
 
 
-os.system('echo "------vncserver------"') #-passwd /home/user/app/vncpass
-os.system('echo -e "123456\n123456\nn\n" |vncserver -xstartup /home/user/app/xstartup -depth 32 -geometry 1200x900 &')
+os.system('echo "------vncserver------"')
+os.system('echo 123456 | vncpasswd -f > /home/user/app/vncpass')
+os.system('vncserver -passwd /home/user/app/vncpass -xstartup /home/user/app/xstartup -depth 32 -geometry 1200x900 &')
 
 
 
