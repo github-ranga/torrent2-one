@@ -7,11 +7,10 @@ COPY ./requirements.txt /code/requirements.txt
 RUN apt update
 RUN apt install -y curl unzip xfce4-terminal tigervnc-standalone-server xfce4
 RUN apt install -y dbus-x11 fish
-RUN apt install -y sudo
-RUN useradd -m user && echo 'user ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers.d/user
+RUN apt install -y stow
 
 
-# RUN useradd -m -u 1000 user
+RUN useradd -m -u 1000 user
 
 USER user
 
