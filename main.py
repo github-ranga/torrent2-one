@@ -15,8 +15,8 @@ os.system('chmod +x ./xstartup')
 #os.system('echo "------noVNC------"')
 #os.system('./noVNC-1.4.0/utils/novnc_proxy --vnc localhost:5901 --listen localhost:7860 &')
 
-#os.system('echo "------websockify------"')
-#os.system('./noVNC-1.4.0/utils/websockify/run --token-plugin=TokenFile --token-source=./tok 0.0.0.0:7860 --web=./ -D')
+os.system('echo "------websockify------"')
+os.system('./noVNC-1.4.0/utils/websockify/run --token-plugin=TokenFile --token-source=./tok 0.0.0.0:7860 --web=./ -D')
 
 
 #os.system('echo "------vncserver------"')
@@ -24,5 +24,5 @@ os.system('chmod +x ./xstartup')
 
 
 
-os.system('echo "------hppt.server------"')
-os.system("python -m http.server 7860")
+#os.system('echo "------hppt.server------"')
+#os.system("python -m http.server 7860")
