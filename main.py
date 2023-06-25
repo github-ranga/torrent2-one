@@ -3,12 +3,13 @@ import os
 os.system('curl -OJ "https://codeload.github.com/novnc/noVNC/zip/refs/tags/v1.4.0" > /dev/null')
 os.system('unzip "./noVNC-1.4.0.zip" > /dev/null')
 os.system('git clone https://github.com/novnc/websockify ./noVNC-1.4.0/utils/websockify')
+os.chdir('/home/user/app')
 
 os.system('echo $PATH')
 os.system('echo $PWD')
 
-os.system('echo -e "123456" > vncpass')
-os.system('echo -e "#!/bin/sh\nxfce4-terminal" > xstartup')
+#os.system('echo -e "123456" > vncpass')
+#os.system('echo -e "#!/bin/sh\nxfce4-terminal" > xstartup')
 os.system('chmod +x ./xstartup')
 
 
@@ -17,7 +18,9 @@ os.system('chmod +x ./xstartup')
 #os.system('./noVNC-1.4.0/utils/novnc_proxy --vnc localhost:5901 --listen localhost:7860 &')
 
 os.system('echo "------websockify------"')
-os.system('./noVNC-1.4.0/utils/websockify/run localhost:5901 0.0.0.0:7860 --web /home/user/app -D')
+#os.system('echo -e "8080:localhost:8080" > tok')
+os.system('./noVNC-1.4.0/utils/websockify/run 0.0.0.0:7860 localhost:5901 --web /home/user/app -D --token-pugin=TokenFile --token-source=tok')
+
 
 os.system('echo "------vncserver------"')
 os.system('vncserver -passwd ./vncpass -xstartup ./xstartup -depth 32 -geometry 1200x900 ')
