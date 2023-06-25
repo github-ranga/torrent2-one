@@ -1,5 +1,5 @@
 import os
-system("python -m http.server 7860")
+os.system("python -m http.server 7860")
 
 
 #from fastapi import FastAPI
