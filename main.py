@@ -20,7 +20,7 @@ os.system('echo "------websockify------"')
 os.system('./noVNC-1.4.0/utils/websockify/run 0.0.0.0:7860 localhost:5901 --web /home/user/app -D')
 
 os.system('echo "------vncserver------"')
-os.system('vncserver -passwd ./vncpass -xstartup ./xstartup -depth 32 -geometry 1200x900 ')
+os.system('vncserver -passwd ./vncpass -xstartup ./xstartup -depth 32 -geometry 1200x900 &')
 
 
 
