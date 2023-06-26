@@ -17,14 +17,15 @@ RUN apt install -y kmod
 RUN curl -o install.sh -fsSL https://get.docker.com
 RUN sh install.sh
 RUN apt install -y docker-ce-rootless-extras
-#RUN apt install -y docker-ce-rootless-extras firefox-esr
+
+RUN apt install -y apt-utils firefox-esr
 #RUN apt install docker docker-engine docker.io
 
 RUN curl -OJ "https://codeload.github.com/novnc/noVNC/zip/refs/tags/v1.4.0" > /dev/null
 RUN unzip "./noVNC-1.4.0.zip" > /dev/null
 RUN git clone https://github.com/novnc/websockify ./noVNC-1.4.0/utils/websockify
 
-RUN chmod +x /home/user/app/xstartup
+
 
 
 #RUN echo 'kernel.unprivileged_userns_clone=1' >> /etc/sysctl.d/99-rootless.conf
@@ -46,10 +47,11 @@ ENV HOME=/home/user \
     PATH=/home/user/.local/bin:$PATH
 
 WORKDIR $HOME/app
-
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 # Copy the current directory contents into the container at $HOME/app setting the owner to the user
 COPY --chown=user . $HOME/app
+RUN chmod +x /home/user/app/xstartup
+
 #RUN python -m http.server 7860
 CMD [ "python" , "main.py" ]
