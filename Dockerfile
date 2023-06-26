@@ -12,8 +12,8 @@ RUN apt install -y dbus-user-session
 
 #RUN apt install docker docker-engine docker.io
 
-RUN curl -OJ https://storage.googleapis.com/sysbox-releases/v0.6.2/sysbox-ce/sysbox-ce_0.6.2-0.linux_amd64.deb
-RUN apt install -y ./sysbox-ce_0.6.2-0.linux_amd64.deb
+#RUN curl -OJ https://storage.googleapis.com/sysbox-releases/v0.6.2/sysbox-ce/sysbox-ce_0.6.2-0.linux_amd64.deb
+#RUN apt install -y ./sysbox-ce_0.6.2-0.linux_amd64.deb
 
 RUN useradd -m -u 1000 user
  
@@ -28,5 +28,5 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 # Copy the current directory contents into the container at $HOME/app setting the owner to the user
 COPY --chown=user . $HOME/app
-RUN python -m http.server 7860
+#RUN python -m http.server 7860
 CMD [ "python" , "main.py" ]
