@@ -1,2 +1,2 @@
 #!/bin/sh
-xfce4-terminal
+startxfce4
