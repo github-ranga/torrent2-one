@@ -10,12 +10,12 @@ RUN apt install -y dbus-x11 fish
 RUN apt install -y stow
 RUN apt install -y dbus-user-session
 #RUN apt install docker docker-engine docker.io
-RUN systemctl --user start dbus
+
 
 RUN useradd -m -u 1000 user
  
 USER user
-
+RUN systemctl --user start dbus
 ENV HOME=/home/user \
     PATH=/home/user/.local/bin:$PATH
 
