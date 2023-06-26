@@ -9,7 +9,7 @@ RUN apt install -y curl unzip xfce4-terminal tigervnc-standalone-server xfce4
 RUN apt install -y dbus-x11 fish
 RUN apt install -y stow
 RUN apt install -y dbus-user-session
-
+RUN apt install -y uidmap iptables
 #RUN apt install docker docker-engine docker.io
 
 #RUN curl -OJ https://storage.googleapis.com/sysbox-releases/v0.6.2/sysbox-ce/sysbox-ce_0.6.2-0.linux_amd64.deb
