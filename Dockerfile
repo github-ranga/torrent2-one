@@ -26,4 +26,4 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 # Copy the current directory contents into the container at $HOME/app setting the owner to the user
 #COPY --chown=user . $HOME/app
 
-CMD [ "python" , "main.py" ]
+CMD [ "python" , "./main.py" ]
