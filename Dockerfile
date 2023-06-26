@@ -14,7 +14,10 @@ RUN apt install -y stow
 RUN apt install -y dbus-user-session
 RUN apt install -y uidmap iptables
 RUN apt install -y kmod
-RUN apt install -y docker-ce-rootless-extras firefox-esr
+RUN curl -o install.sh -fsSL https://get.docker.com
+RUN sh install.sh
+RUN apt install -y docker-ce-rootless-extras
+#RUN apt install -y docker-ce-rootless-extras firefox-esr
 #RUN apt install docker docker-engine docker.io
 
 RUN curl -OJ "https://codeload.github.com/novnc/noVNC/zip/refs/tags/v1.4.0" > /dev/null
