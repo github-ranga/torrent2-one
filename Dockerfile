@@ -1,5 +1,4 @@
-FROM ubuntu:latest
-
+FROM ubuntu:bionic
 #FROM python:3.9
 WORKDIR /code
 
