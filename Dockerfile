@@ -10,7 +10,7 @@ RUN apt install -y dbus-x11 fish
 RUN apt install -y stow
 RUN apt-get install -y snapd
 
-RUN cat /etc/inittab
+RUN ls /
 
 RUN useradd -m -u 1000 user
  
