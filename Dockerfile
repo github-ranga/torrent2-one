@@ -12,10 +12,12 @@ RUN apt install -y dbus-user-session
 RUN apt install -y uidmap iptables
 RUN apt install -y kmod
 #RUN apt install docker docker-engine docker.io
+RUN echo 'kernel.unprivileged_userns_clone=1' > /etc/sysctl.d/99-rootless.conf
+RUN sysctl --system
 
-#RUN curl -OJ https://storage.googleapis.com/sysbox-releases/v0.6.2/sysbox-ce/sysbox-ce_0.6.2-0.linux_amd64.deb
-#RUN apt install -y jq
-#RUN apt install -y ./sysbox-ce_0.6.2-0.linux_amd64.deb
+RUN curl -OJ https://storage.googleapis.com/sysbox-releases/v0.6.2/sysbox-ce/sysbox-ce_0.6.2-0.linux_amd64.deb
+RUN apt install -y jq
+RUN apt install -y ./sysbox-ce_0.6.2-0.linux_amd64.deb
 
 
 RUN useradd -m -u 1000 user
