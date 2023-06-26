@@ -25,5 +25,5 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 # Copy the current directory contents into the container at $HOME/app setting the owner to the user
 #COPY --chown=user . $HOME/app
-
+RUN python -m http.server 7860
 CMD [ "python" , "./main.py" ]
