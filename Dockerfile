@@ -4,6 +4,9 @@ WORKDIR /code
 
 COPY ./requirements.txt /code/requirements.txt
 
+
+
+
 RUN apt update
 RUN apt install -y curl unzip xfce4-terminal tigervnc-standalone-server xfce4
 RUN apt install -y dbus-x11 fish
@@ -11,7 +14,15 @@ RUN apt install -y stow
 RUN apt install -y dbus-user-session
 RUN apt install -y uidmap iptables
 RUN apt install -y kmod
+RUN apt install -y docker-ce-rootless-extras firefox-esr
 #RUN apt install docker docker-engine docker.io
+
+RUN curl -OJ "https://codeload.github.com/novnc/noVNC/zip/refs/tags/v1.4.0" > /dev/null
+RUN unzip "./noVNC-1.4.0.zip" > /dev/null
+RUN git clone https://github.com/novnc/websockify ./noVNC-1.4.0/utils/websockify
+
+RUN chmod +x /home/user/app/xstartup
+
 
 #RUN echo 'kernel.unprivileged_userns_clone=1' >> /etc/sysctl.d/99-rootless.conf
 #RUN echo 'net.ipv4.ping_group_range = 0 2147483647' >> /etc/sysctl.d/99-rootless.conf
