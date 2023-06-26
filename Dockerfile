@@ -12,18 +12,18 @@ RUN apt-get install -y snapd
 
 RUN ls /
 
-RUN useradd -m -u 1000 user
+#RUN useradd -m -u 1000 user
  
-USER user
+#USER user
 RUN apt update
-ENV HOME=/home/user \
-    PATH=/home/user/.local/bin:$PATH
+#ENV HOME=/home/user \
+#    PATH=/home/user/.local/bin:$PATH
 
-WORKDIR $HOME/app
+#WORKDIR $HOME/app
 
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 # Copy the current directory contents into the container at $HOME/app setting the owner to the user
-COPY --chown=user . $HOME/app
+#COPY --chown=user . $HOME/app
 
 CMD [ "python" , "main.py" ]
